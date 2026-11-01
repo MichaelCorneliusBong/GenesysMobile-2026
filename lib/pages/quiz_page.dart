@@ -110,7 +110,7 @@ class QuizPage extends StatelessWidget {
                 onPressed: () {
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(
-                      content: Text('Memulai Genesys Point Quiz...'),
+                      content: Text('Starting Genesys Point Quiz...'),
                       duration: Duration(seconds: 2),
                     ),
                   );

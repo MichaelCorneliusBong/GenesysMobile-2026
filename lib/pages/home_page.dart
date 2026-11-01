@@ -68,7 +68,7 @@ class HomePage extends StatelessWidget {
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('Membuka ${feature.title}... (Prototype Interaktif)'),
+          content: Text('Opening ${feature.title}... (Interactive Prototype)'),
           duration: const Duration(seconds: 1),
         ),
       );

@@ -31,7 +31,7 @@ class CardGridItem extends StatelessWidget {
               () {
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
-                    content: Text('Kartu (${card.gpPoints} GP) Selected'),
+                    content: Text('Card (${card.gpPoints} GP) Selected'),
                     duration: const Duration(seconds: 1),
                   ),
                 );

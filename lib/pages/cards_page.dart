@@ -157,7 +157,7 @@ class _CardsPageState extends State<CardsPage> {
                         onPressed: () {
                           ScaffoldMessenger.of(context).showSnackBar(
                             const SnackBar(
-                              content: Text('Filter Kartu (Prototype)'),
+                              content: Text('Filter Cards (Prototype)'),
                               duration: Duration(seconds: 1),
                             ),
                           );
@@ -171,7 +171,7 @@ class _CardsPageState extends State<CardsPage> {
                       padding: EdgeInsets.symmetric(vertical: 40),
                       child: Center(
                         child: Text(
-                          'Tidak ada kartu ditemukan',
+                          'No cards found',
                           style: TextStyle(color: Color(0xFF8E8E9A)),
                         ),
                       ),

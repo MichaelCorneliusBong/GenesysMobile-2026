@@ -34,13 +34,31 @@ class GenesysMetaApp extends StatelessWidget {
         useMaterial3: true,
       ),
       initialRoute: '/',
-      routes: {
-        '/': (context) => const ShellPage(),
-        '/login': (context) => const LoginPage(),
-        '/register': (context) => const RegisterPage(),
-        '/bookmarks': (context) => const BookmarksPage(),
-        '/quiz': (context) => const QuizPage(),
-        '/profile': (context) => const ProfilePage(),
+      onGenerateRoute: (settings) {
+        Widget page = const ShellPage();
+        if (settings.name == '/login') {
+          page = const LoginPage();
+        } else if (settings.name == '/register') {
+          page = const RegisterPage();
+        } else if (settings.name == '/bookmarks') {
+          page = const BookmarksPage();
+        } else if (settings.name == '/quiz') {
+          page = const QuizPage();
+        } else if (settings.name == '/profile') {
+          page = const ProfilePage();
+        }
+
+        return PageRouteBuilder(
+          settings: settings,
+          pageBuilder: (context, animation, secondaryAnimation) => page,
+          transitionsBuilder: (context, animation, secondaryAnimation, child) {
+            return FadeTransition(
+              opacity: animation,
+              child: child,
+            );
+          },
+          transitionDuration: const Duration(milliseconds: 250),
+        );
       },
     );
   }

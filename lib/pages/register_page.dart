@@ -40,8 +40,8 @@ class _RegisterPageState extends State<RegisterPage> {
       if (captchaAnswer != '4') {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
-            content: Text('Jawaban Verifikasi Keamanan salah! (1 + 3 = 4)'),
-            backgroundColor: Colors.redAccent,
+            content: Text('Incorrect Security Verification answer! (1 + 3 = 4)'),
+            backgroundColor: Color(0xFF1B1B24),
           ),
         );
         return;
@@ -51,8 +51,8 @@ class _RegisterPageState extends State<RegisterPage> {
       if (success) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('Registrasi Berhasil! Selamat datang, $name.'),
-            backgroundColor: const Color(0xFFE52E3D),
+            content: Text('Registration Successful! Welcome, $name.'),
+            backgroundColor: const Color(0xFF1B1B24),
             duration: const Duration(seconds: 2),
           ),
         );
@@ -60,8 +60,8 @@ class _RegisterPageState extends State<RegisterPage> {
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
-            content: Text('Registrasi Gagal. Periksa kembali inputan Anda.'),
-            backgroundColor: Colors.redAccent,
+            content: Text('Registration Failed. Please check your inputs.'),
+            backgroundColor: Color(0xFF1B1B24),
           ),
         );
       }
@@ -108,7 +108,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     controller: _nameController,
                     validator: (val) {
                       if (val == null || val.trim().isEmpty) {
-                        return 'Nama tidak boleh kosong';
+                        return 'Name cannot be empty';
                       }
                       return null;
                     },
@@ -122,10 +122,10 @@ class _RegisterPageState extends State<RegisterPage> {
                     keyboardType: TextInputType.emailAddress,
                     validator: (val) {
                       if (val == null || val.isEmpty) {
-                        return 'Email tidak boleh kosong';
+                        return 'Email cannot be empty';
                       }
                       if (!val.contains('@')) {
-                        return 'Format email tidak valid';
+                        return 'Invalid email format';
                       }
                       return null;
                     },
@@ -139,10 +139,10 @@ class _RegisterPageState extends State<RegisterPage> {
                     controller: _passwordController,
                     validator: (val) {
                       if (val == null || val.isEmpty) {
-                        return 'Password tidak boleh kosong';
+                        return 'Password cannot be empty';
                       }
                       if (val.length < 6) {
-                        return 'Password minimal 6 karakter';
+                        return 'Password must be at least 6 characters';
                       }
                       return null;
                     },
@@ -156,7 +156,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     controller: _confirmPasswordController,
                     validator: (val) {
                       if (val != _passwordController.text) {
-                        return 'Konfirmasi password tidak cocok';
+                        return 'Passwords do not match';
                       }
                       return null;
                     },
@@ -229,7 +229,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                     color: Colors.white, fontSize: 14),
                                 validator: (val) {
                                   if (val == null || val.isEmpty) {
-                                    return 'Wajib diisi';
+                                    return 'Required';
                                   }
                                   return null;
                                 },

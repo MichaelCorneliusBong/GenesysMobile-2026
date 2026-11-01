@@ -89,9 +89,18 @@ class _ShellPageState extends State<ShellPage> {
     ];
 
     return Scaffold(
-      body: IndexedStack(
-        index: _currentIndex,
-        children: pages,
+      body: AnimatedSwitcher(
+        duration: const Duration(milliseconds: 250),
+        transitionBuilder: (child, animation) {
+          return FadeTransition(
+            opacity: animation,
+            child: child,
+          );
+        },
+        child: KeyedSubtree(
+          key: ValueKey<int>(_currentIndex),
+          child: pages[_currentIndex],
+        ),
       ),
       bottomNavigationBar: Container(
         decoration: const BoxDecoration(

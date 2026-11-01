@@ -178,7 +178,7 @@ class ArchetypeCard extends StatelessWidget {
                   onTap: () {
                     Navigator.pop(ctx);
                     ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text('Membuka varian: $v')),
+                      SnackBar(content: Text('Opening variant: $v')),
                     );
                   },
                 ),

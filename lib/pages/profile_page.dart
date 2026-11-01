@@ -41,8 +41,8 @@ class _ProfilePageState extends State<ProfilePage> {
   void _saveChanges() {
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
-        content: Text('Perubahan akun berhasil disimpan!'),
-        backgroundColor: Color(0xFFE52E3D),
+        content: Text('Account changes successfully saved!'),
+        backgroundColor: Color(0xFF1B1B24),
         duration: Duration(seconds: 2),
       ),
     );
@@ -52,7 +52,8 @@ class _ProfilePageState extends State<ProfilePage> {
     _authRepo.logout();
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
-        content: Text('Berhasil Log Out.'),
+        content: Text('Successfully Logged Out.'),
+        backgroundColor: Color(0xFF1B1B24),
         duration: Duration(seconds: 1),
       ),
     );

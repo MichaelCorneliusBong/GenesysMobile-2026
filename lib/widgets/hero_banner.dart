@@ -101,7 +101,7 @@ class HeroBanner extends StatelessWidget {
                 () {
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(
-                      content: Text('Membuka Browse Decks...'),
+                      content: Text('Opening Browse Decks...'),
                       duration: Duration(seconds: 1),
                     ),
                   );
@@ -141,7 +141,7 @@ class HeroBanner extends StatelessWidget {
                 () {
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(
-                      content: Text('Membuka Search Cards...'),
+                      content: Text('Opening Search Cards...'),
                       duration: Duration(seconds: 1),
                     ),
                   );

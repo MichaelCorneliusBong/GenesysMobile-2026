@@ -30,7 +30,7 @@ class FeatureCard extends StatelessWidget {
               () {
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
-                    content: Text('Membuka ${feature.title} (Prototype)'),
+                    content: Text('Opening ${feature.title} (Prototype)'),
                     duration: const Duration(seconds: 1),
                   ),
                 );

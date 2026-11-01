@@ -29,8 +29,8 @@ class _LoginPageState extends State<LoginPage> {
 
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text('Selamat datang kembali, ${_authRepo.currentUser?.name ?? 'Alex Turner'}!'),
-        backgroundColor: const Color(0xFFE52E3D),
+        content: Text('Welcome back, ${_authRepo.currentUser?.name ?? 'Alex Turner'}!'),
+        backgroundColor: const Color(0xFF1B1B24),
         duration: const Duration(seconds: 2),
       ),
     );
