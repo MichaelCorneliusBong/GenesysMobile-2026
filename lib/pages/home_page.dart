@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../data/auth_repository.dart';
 import '../data/feature_repository.dart';
 import '../models/platform_feature.dart';
 import '../widgets/feature_card.dart';
@@ -65,6 +66,13 @@ class HomePage extends StatelessWidget {
       onNavigateTab!(3);
     } else if (feature.id == 'format_guides' && onNavigateTab != null) {
       onNavigateTab!(4);
+    } else if (feature.id == 'knowledge_quiz') {
+      final authRepo = AuthRepository();
+      if (authRepo.isLoggedIn) {
+        Navigator.pushNamed(context, '/quiz');
+      } else {
+        Navigator.pushNamed(context, '/login');
+      }
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
