@@ -34,22 +34,6 @@ class DecksRepository {
       variantCount: 4,
       variants: ['Voiceless Ritual', 'Voiceless Branded', 'Pure Voiceless'],
     ),
-    Archetype(
-      id: 'tenpai_dragon',
-      name: 'Tenpai Dragon',
-      badgeText: '0',
-      verified: true,
-      variantCount: 3,
-      variants: ['Tenpai Board Wipe', 'Tenpai Going Second'],
-    ),
-    Archetype(
-      id: 'snake_eye',
-      name: 'Snake-Eye Fire King',
-      badgeText: '0',
-      verified: true,
-      variantCount: 3,
-      variants: ['Snake-Eye FK Pure', 'Snake-Eye Sinful Spoils'],
-    ),
   ];
 
   List<Archetype> getAllArchetypes() {
